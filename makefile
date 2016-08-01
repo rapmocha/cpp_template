@@ -7,7 +7,7 @@ else
 endif
 LIBS      =
 INCLUDE   = -I./include
-TARGET    = ./bin/$(shell basename `readlink -f .`)
+TARGET    = ./bin/$(shell basename `pwd`)
 SRCDIR    = ./source
 ifeq "$(strip $(SRCDIR))" ""
   SRCDIR  = .
