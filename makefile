@@ -1,12 +1,12 @@
 COMPILER  = g++
-CFLAGS    = -g -MMD -MP -Wall -Wextra -Winit-self -Wno-missing-field-initializers
+CFLAGS    = -g -MMD -MP -Wall -Wextra -Winit-self -Wno-missing-field-initializers -std=c++11
 ifeq "$(shell getconf LONG_BIT)" "64"
-  LDFLAGS =
+  LDFLAGS = `pkg-config --libs opencv`
 else
   LDFLAGS =
 endif
 LIBS      =
-INCLUDE   = -I./include
+INCLUDE   = -I./include -I/usr/local/include `pkg-config --cflags opencv`
 TARGET    = ./bin/$(shell basename `pwd`)
 SRCDIR    = ./source
 ifeq "$(strip $(SRCDIR))" ""
