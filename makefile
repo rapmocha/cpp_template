@@ -1,12 +1,13 @@
 COMPILER  = g++
 CFLAGS    = -g -MMD -MP -Wall -Wextra -Winit-self -Wno-missing-field-initializers -std=c++11
 ifeq "$(shell getconf LONG_BIT)" "64"
-  LDFLAGS = `pkg-config --libs opencv` -lboost_filesystem-mt
+  LDFLAGS = `pkg-config --libs opencv` -lboost_filesystem-mt -lboost_system-mt
 else
   LDFLAGS =
 endif
-LIBS      = /usr/local/lib/libboost*-mt.a
-INCLUDE   = -I./include -I/usr/local/include `pkg-config --cflags opencv`
+# LIBS      = /usr/local/lib/libboost*-mt.a
+LIBS = 
+INCLUDE   = -I./include -I/usr/local/include -I/usr/local/lib/ `pkg-config --cflags opencv`
 TARGET    = ./bin/$(shell basename `pwd`)
 SRCDIR    = ./source
 ifeq "$(strip $(SRCDIR))" ""
