@@ -1,10 +1,12 @@
 // Copyright 2016 rapmocha
 
-#include <iostream>
 #include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <boost/filesystem/path.hpp>
 #include <boost/filesystem/operations.hpp>
+#include <iostream>
+#include <string>
+#include <vector>
 
 void cpp11_test();
 void opencv_test();
@@ -48,3 +50,4 @@ void boost_test() {
         std::cout << *begin << std::endl;
     }
 }
+

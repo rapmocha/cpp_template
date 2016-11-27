@@ -1,6 +1,8 @@
-#ifndef SAMPLE_H
-#define SAMPLE_H
+// Copyright 2016 rapmocha
+
+#ifndef HELLO_WORLD_H_
+#define HELLO_WORLD_H_
 
 void hello_world();
 
-#endif // SAMPLE_H
+#endif  // HELLO_WORLD_H_
