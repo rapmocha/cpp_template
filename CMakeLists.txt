@@ -52,7 +52,7 @@ pkg_check_modules(OpenCV REQUIRED opencv)
 find_package(Boost REQUIRED filesystem system)
 
 #### Specify include header directories
-include_directories(${INCLUDE_DIR}
+include_directories(${INCLUDE_DIR} ${PROJECT_SOURCE_DIR}
   ${OpenCV_INCLUDE_DIRS}
   ${Boost_INCLUDE_DIRS}
   )
